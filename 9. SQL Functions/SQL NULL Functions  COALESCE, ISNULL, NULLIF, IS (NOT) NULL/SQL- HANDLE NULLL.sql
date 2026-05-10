@@ -10,6 +10,6 @@ COALESCE(FirstName, '') AS New_First_name,
 COALESCE(LastName, '') As New_Last_name,
 COALESCE(Score, 0) AS New_Score,
 COALESCE(FirstName, '') +  ' ' + COALESCE(LastName, '') AS Full_name,
-Score + 10 AS Bonus_point
+COALESCE(Score, 0) + 10 AS Bonus_point
 
 FROM Sales.Customers
