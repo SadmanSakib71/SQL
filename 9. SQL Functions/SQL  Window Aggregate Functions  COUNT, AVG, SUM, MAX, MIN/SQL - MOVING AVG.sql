@@ -5,7 +5,7 @@ SELECT
 	Sales,
 	ProductID,
 	AVG(Sales) OVER (PARTITION BY ProductId) AS Avg_sales_BY_Product,
-	AVG(Sales) OVER (PARTITION BY ProductId ORDER BY OrderDate) AS Avg_sales_Moving
+	AVG(Sales) OVER (PARTITION BY ProductId ORDER BY OrderDate) AS Running_Total
 FROM Sales.Orders
 
 
