@@ -3,6 +3,7 @@ SELECT
 	OrderDate,
 	OrderStatus,
 	Sales,
+
 -- for bottom results
 SUM(Sales) OVER(PARTITION BY OrderStatus ORDER BY OrderDate 
 ROWS BETWEEN CURRENT ROW AND 2 FOLLOWING
