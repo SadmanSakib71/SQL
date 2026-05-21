@@ -8,3 +8,4 @@ SELECT
 	COUNT(OrderID) AS Total_orders,
 	SUM(Quantity) AS Total_quantity
 FROM  Sales.Orders
+GROUP BY DATETRUNC(month,OrderDATE))
